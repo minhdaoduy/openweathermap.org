@@ -1,0 +1,8 @@
+{
+  "baseUrl": "https://openweathermap.org/",
+  "chromeWebSecurity": false,
+  "waitForAnimations": true,
+  "defaultCommandTimeout": 15000,
+  "requestTimeout": 20000,
+  "responseTimeout": 30000
+}
