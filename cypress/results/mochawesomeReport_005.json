@@ -1,0 +1,108 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-09-30T07:48:12.758Z",
+    "end": "2021-09-30T07:48:26.766Z",
+    "duration": 14008,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "0a07cc7a-b1d5-41d9-b4df-d6f3c6d1bc72",
+      "title": "",
+      "fullFile": "cypress/integration/VerifySearchResult2.spec.js",
+      "file": "cypress/integration/VerifySearchResult2.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ec951697-223c-4790-b0a1-1af6c4e07f65",
+          "title": "Sign In",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Testcase ID C1 - Verify displaying of search result",
+              "fullTitle": "Sign In Testcase ID C1 - Verify displaying of search result",
+              "timedOut": null,
+              "duration": 13933,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "(0, _searchControl.searchAndVerify)(_inputData.searchInput.keyword2);",
+              "err": {},
+              "uuid": "b9356ece-20fd-49d5-adb3-3fce6f081617",
+              "parentUUID": "ec951697-223c-4790-b0a1-1af6c4e07f65",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b9356ece-20fd-49d5-adb3-3fce6f081617"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 13933,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesomeReport.json",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results",
+        "reportFilename": "mochawesomeReport.json",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}
