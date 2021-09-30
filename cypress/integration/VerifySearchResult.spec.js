@@ -1,17 +1,22 @@
 import { searchAndVerify } from "../BusinessControl/searchControl";
 import { searchInput } from "../fixtures/inputData.json";
+import { submitResult } from "../helpers/testRail";
 describe("Sign In", () => {
-  before(() => {
-    cy.window().then((win) => {
-      win.localStorage.clear;
-    });
+  let result = {
+    testID: "",
+    status: "untested",
+    message: "this test is failed",
+  };
 
-    cy.clearCookies();
-    cy.clearLocalStorage();
-    // cy.visit("");
+  it("[1-1] Verify displaying of search result", () => {
+    result.testID = "1";
+    result.status = "failed";
+    searchAndVerify(searchInput.keyword);
+    result.status = "passed";
+    result.message = "";
   });
 
-  it("Verify displaying of search result [1]", () => {
-    searchAndVerify(searchInput.keyword);
+  afterEach(() => {
+    submitResult(result);
   });
 });
