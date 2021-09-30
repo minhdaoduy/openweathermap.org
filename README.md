@@ -9,4 +9,4 @@ npx cypress run --record --group 2x-chrome --browser chrome --parallel --ci-buil
 
 npx cypress run --record --key=5ea94412-6792-4bd7-a4f4-7e8d457d2985 --group 2x-electron --parallel --ci-build-id main-05eae7d0bd3a8af8cbf56e5f55461396fd26e65a
 
-npx cypress run --record --key=5ea94412-6792-4bd7-a4f4-7e8d457d2985 --group 2x-chrome --browser chrome --parallel --ci-build-id main-56c79ef727d005cb4acb4a97333b4548135b56a0
+npx cypress run --record --key=5ea94412-6792-4bd7-a4f4-7e8d457d2985 --group 2x-chrome --browser chrome --parallel --ci-build-id main-16c2b0760723e8836552beb406ea9e6fd2ee5cd2
