@@ -1,19 +1,17 @@
-import Search from "../PageObjects/searchObject";
+import { searchAndVerify } from "../BusinessControl/searchControl";
 import { searchInput } from "../fixtures/inputData.json";
-const search = new Search();
 describe("Sign In", () => {
-  let home;
-  // before(() => {
-
-  // });
   before(() => {
-    cy.visit();
+    cy.window().then((win) => {
+      win.localStorage.clear;
+    });
+
+    cy.clearCookies();
+    cy.clearLocalStorage();
+    // cy.visit("");
   });
 
-  it("Testcase ID C1 - Verify displaying of search result", () => {
-    const signIn = home.goToSignIn();
-
-    signIn.fillEmail("daoduyminh@gmail.com").fillPassword("operation").submit();
-    home.verifyLoginSuccessfulByEmail("daoduyminh@gmail.com");
+  it("Verify displaying of search result [1]", () => {
+    searchAndVerify(searchInput.keyword);
   });
 });

@@ -34,7 +34,7 @@ Cypress.Commands.add("press", (location) => {
   field.click();
 });
 
-Cypress.Commands.add("getText", (location) => {
-  const field = cy.get(location);
-  return field.text();
-});
+// Cypress.Commands.add("getText", (location) => {
+//   return cy.get(location).invoke("text");
+//   // return field.text();
+// });

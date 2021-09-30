@@ -2,7 +2,28 @@
   "baseUrl": "https://openweathermap.org/",
   "chromeWebSecurity": false,
   "waitForAnimations": true,
-  "defaultCommandTimeout": 15000,
-  "requestTimeout": 20000,
-  "responseTimeout": 30000
+  "defaultCommandTimeout": 150000,
+  "requestTimeout": 200000,
+  "responseTimeout": 300000,
+  "projectId": "d5gj9p",
+  "reporter": "cypress-multi-reporters",
+  "reporterOptions": {
+    "reporterEnabled": "mochawesome",
+    "mochawesomeReporterOptions": {
+      "reportDir": "cypress/results",
+      "reportFilename": "mochawesomeReport.json",
+      "quite": true,
+      "overwrite": false,
+      "html": false,
+      "json": true
+    }
+  },
+  "testrailReporter": {
+    "projectId": "1",
+    "suiteId": "1",
+    "host": "https://minhdao.testrail.io/",
+    "user": "daoduyminh@gmail.com",
+    "password": "U8ewFuN6xA987EaFOESH",
+    "includeAll": true
+  }
 }

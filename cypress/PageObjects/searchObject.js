@@ -4,28 +4,34 @@ export default class searchObject {
   }
 
   clickSearchButton() {
-    return cy.press(value, 'button[type="submit"]');
+    cy.press('button[type="submit"]');
   }
 
-  clickSuggestionByCityName(cityName) {
-    cy.get(
-      '[class="search-dropdown-menu"] li:contains(' + cityName + ")"
-    ).click();
+  clickTheFirstSuggestionByCityName(numberSuggestion = 0) {
+    cy.get('[class="search-dropdown-menu"] li').eq(numberSuggestion).click();
   }
 
-  getCityNameInSearchResult() {
-    // return cy.get('[class="section-content"] h2');
-    return cy.getText('[class="section-content"] h2');
+  verifyCityNameInSearchResult(text) {
+    cy.get('[class="section-content"] h2').should((ele) => {
+      expect(ele.text().toLowerCase()).to.contains(text);
+    });
   }
 
-  getTemperatureInSearchResult() {
-    // return cy.get('[class="current-temp"] span');
-    return cy.getText('[class="current-temp"] span');
+  verifyTemperatureInSearchResult(text) {
+    cy.get('[class="current-temp"] span').should("have.text", text);
   }
 
-  getCurrentDateInSearchResult() {
-    // return cy.get('[class="section-content"] h2').siblings();
-    // return cy.getText('[class="section-content"] h2 + span');
-    return cy.getText('[class="section-content"] [class="orange-text"]');
+  verifyCurrentDateInSearchResult() {
+    cy.get('[class="section-content"] [class="orange-text"]').should((ele) => {
+      const expectedCurrentDate = Date.parse(new Date());
+      let currentDate = ele.text().replace("am", " am");
+      currentDate = currentDate.replace("pm", " pm");
+      currentDate = currentDate.replace(",", "," + new Date().getFullYear());
+      currentDate = Date.parse(currentDate);
+      expect(currentDate).within(
+        expectedCurrentDate - 100000,
+        expectedCurrentDate
+      );
+    });
   }
 }
