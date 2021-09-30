@@ -1,7 +1,7 @@
 import { searchAndVerify } from "../BusinessControl/searchControl";
 import { searchInput } from "../fixtures/inputData.json";
 import { submitResult } from "../helpers/testRail";
-describe("Sign In", () => {
+describe("Verify search result", () => {
   let result = {
     testID: "",
     status: "untested",

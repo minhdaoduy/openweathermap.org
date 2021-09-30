@@ -7,7 +7,7 @@ export default class searchObject {
     cy.press('button[type="submit"]');
   }
 
-  clickTheFirstSuggestionByCityName(numberSuggestion = 0) {
+  clickTheFirstSuggestion(numberSuggestion = 0) {
     cy.get('[class="search-dropdown-menu"] li').eq(numberSuggestion).click();
   }
 
